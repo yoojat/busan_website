@@ -1,12 +1,22 @@
 import type { NextPage } from 'next';
 
+import tw from 'tailwind-styled-components';
+const Container = tw.div`
+    flex
+    items-center
+    justify-center
+    flex-col
+    w-full
+    bg-indigo-600
+`;
+
 const Home: NextPage = () => {
   return (
-    <div className='bg-red-500'>
-      <div className='bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3'>
-        it works
+    <Container>
+      <div>
+        <div>it works</div>
       </div>
-    </div>
+    </Container>
   );
 };
 
