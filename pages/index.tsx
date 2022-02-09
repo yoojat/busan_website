@@ -1,12 +1,11 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
     <div className='bg-red-500'>
-      <div className='text-blue-500'>it works</div>
+      <div className='bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3'>
+        it works
+      </div>
     </div>
   );
 };
