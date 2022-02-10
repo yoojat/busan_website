@@ -7,7 +7,7 @@ interface IProps {
 export default function Layout({ children }: IProps) {
   return (
     <>
-      <NavBar />
+      <NavBar menuItems={[{ name: 'price', path: '/price' }]} />
       <div>{children}</div>
     </>
   );
