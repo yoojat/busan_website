@@ -13,7 +13,6 @@ px-7
 lg:px-24
 fixed
 w-full
-bg-red-400
 `;
 
 const MenuBarContainer = tw.div`
@@ -45,6 +44,7 @@ lg:space-x-2
 text-lg
 bg-yellow-300
 z-50
+bg-white-100
 `;
 
 const MenuBarIcon = tw.svg<{ $isSideMenuShow: boolean }>`

@@ -7,6 +7,7 @@ module.exports = {
     transitionTimingFunction: {
       'menu-in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
     },
+
     extend: {
       keyframes: {
         wiggle: {
