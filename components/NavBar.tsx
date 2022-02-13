@@ -13,12 +13,14 @@ px-7
 lg:px-24
 fixed
 w-full
+bg-white
 `;
 
 const MenuBarContainer = tw.div`
 block
 z-50
 lg:hidden
+
 `;
 
 const ImageContainer = tw.div`
@@ -30,7 +32,7 @@ w-4/5
 max-w-[18.75em]
 h-screen
 ${(props) => (props.$isSideMenuShow ? 'right-0' : '-right-full')}
-transition-all
+transition-transform
 duration-500
 ease-menu-in-out
 top-0
@@ -40,11 +42,15 @@ lg:top-auto
 lg:w-auto
 lg:flex
 lg:relative
-lg:space-x-2
+lg:space-x-7
 text-lg
-bg-yellow-300
+bg-zinc-100
 z-50
-bg-white-100
+px-8
+pt-5
+lg:px-0
+lg:pt-5
+lg:bg-transparent
 `;
 
 const MenuBarIcon = tw.svg<{ $isSideMenuShow: boolean }>`
@@ -55,10 +61,14 @@ cursor-pointer
 animate-wiggle
 `;
 
-const TopMenuItem = tw.div``;
+const TopMenuItem = tw.div`
+text-base
+font-medium
+pb-5
+`;
 
 const DarkCover = tw.div<{ $isSideMenuShow: boolean }>`
-${(props) => (props.$isSideMenuShow ? 'bg-slate-500/50' : '')}
+${(props) => (props.$isSideMenuShow ? 'bg-gray-900/80' : '')}
 ${(props) => (props.$isSideMenuShow ? 'visible' : 'invisible')}
 transition-all
 duration-500
@@ -66,6 +76,13 @@ w-full
 h-screen
 absolute
 -z-10
+`;
+
+const SideBarLogoContainer = tw.div`
+lg:hidden
+border-b
+border-b-gray-400
+mb-5
 `;
 
 interface MenuItem {
@@ -101,6 +118,19 @@ export default function NavBar({
           </a>
         </Link>
         <MenuContainer $isSideMenuShow={isSideMenuShow}>
+          <SideBarLogoContainer>
+            <Link href='/'>
+              <a>
+                <Image
+                  src={logo}
+                  alt={title}
+                  width={200}
+                  height={50}
+                  objectFit='contain'
+                />
+              </a>
+            </Link>
+          </SideBarLogoContainer>
           {menuItems.map((menuItem, index) => (
             <Link href={menuItem.path} key={index}>
               <a>

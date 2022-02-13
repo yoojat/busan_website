@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import tw from 'tailwind-styled-components';
-import { bgColor } from '../libs/options';
+import { bgColor, menus } from '../libs/options';
 import { mediaSize } from '../libs/media';
 import { Router } from 'next/router';
 
@@ -44,7 +44,7 @@ export default function Layout({ children }: IProps) {
       <NavBar
         isSideMenuShow={isSideMenuShow}
         setIsSideMenuShow={setIsSideMenuShow}
-        menuItems={[{ name: 'price', path: '/price' }]}
+        menuItems={[...menus]}
       />
       <ContentLayout $isSideMenuShow={isSideMenuShow}>{children}</ContentLayout>
     </>
