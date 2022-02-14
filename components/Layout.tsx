@@ -14,6 +14,15 @@ md:mt-20
 -z-50
 `;
 
+const Footer = tw.footer`
+  bg-green-900
+  w-full
+  mt-40
+  py-5
+  text-white
+  text-center
+`;
+
 interface IProps {
   children: React.ReactNode;
 }
@@ -46,7 +55,10 @@ export default function Layout({ children }: IProps) {
         setIsSideMenuShow={setIsSideMenuShow}
         menuItems={[...menus]}
       />
-      <ContentLayout $isSideMenuShow={isSideMenuShow}>{children}</ContentLayout>
+      <ContentLayout $isSideMenuShow={isSideMenuShow}>
+        <>{children}</>
+        <Footer>footer</Footer>
+      </ContentLayout>
     </>
   );
 }

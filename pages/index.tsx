@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import tw from 'tailwind-styled-components';
+import BodyItem from '../components/bodyItem';
 
 const TopSection = tw.div`
   pt-14
@@ -67,41 +68,9 @@ const ImageContainer = tw.div`
 
 const BodySection = tw.section`
   mt-20
+  space-y-24
   
 `;
-const BodyItem = tw.div`
-  px-10
-  max-w-screen-lg
-  mx-auto
-  flex
-  flex-wrap
-  flex-col
-  justify-center
-  items-center
-  lg:items-start
-  lg:flex-row
-  lg:justify-between
-`;
-const DescriptionImage = tw.div`
-  max-w-md
-`;
-const DescriptionBox = tw.div`
-  max-w-md
-  mt-10
-  lg:mt-0
-`;
-const TitleDescription = tw.h2`
-  text-green-900
-  text-2xl
-  mb-3
-`;
-const SubTitleDescription = tw.div`
-  text-gray-500
-  mb-12
-`;
-const SmallDescription = tw.div``;
-const SmallDescriptionTitle = tw.div``;
-const SmallSubDescriptionContent = tw.div``;
 
 const Home: NextPage = () => {
   return (
@@ -144,36 +113,52 @@ const Home: NextPage = () => {
         </TopContentContainer>
       </TopSection>
       <BodySection>
-        <BodyItem>
-          <DescriptionImage>
-            <Image
-              src={'/main_image2.jpg'}
-              alt='make_web_main_image'
-              width={800}
-              height={500}
-              objectFit='cover'
-            />
-          </DescriptionImage>
-
-          <DescriptionBox>
-            <TitleDescription>
-              Selling online has never been easier
-            </TitleDescription>
-            <SubTitleDescription>
-              Set up your store in minutes and bring your brand to life
-            </SubTitleDescription>
-            <SmallDescription>
-              <SmallDescriptionTitle>
-                Drag-and-drop store builder
-              </SmallDescriptionTitle>
-              <SmallSubDescriptionContent>
-                Choose from over 70 professional and free store themes.Customize
-                colours, imagery, and fonts with ease. No design skills
-                required.
-              </SmallSubDescriptionContent>
-            </SmallDescription>
-          </DescriptionBox>
-        </BodyItem>
+        <BodyItem
+          imageSrc={'/main_image2.jpg'}
+          imageAlt={'make_web_main_image'}
+          titleDescription={'웹사이트 제작에 대해서 잘 모르시나요?'}
+          subtitleDescription={'꼭 저희를 통해서 진행하지 않으셔도 됩니다.'}
+          smallDescriptionTitle={'무료로 상담해드립니다.'}
+          smallSubDescriptionContents={[
+            '웹사이트 업체가 부르는 가격은 천차만별일 겁니다.',
+            '거품을 없애는 방법을 알려드리겠습니다.',
+          ]}
+        />
+        <BodyItem
+          imageSrc={'/main_image2.jpg'}
+          imageAlt={'make_web_main_image'}
+          titleDescription={'저희는 디자이너는 없습니다.'}
+          subtitleDescription={'대신 참고하실 사이트만 알려주세요!'}
+          smallDescriptionTitle={'저희는 디자이너는 없습니다. 단!'}
+          smallSubDescriptionContents={[
+            '똑같이 만들어 낼 개발 능력은 있습니다.',
+            '하지만 퀄리티는 보증합니다.',
+            '실력으로 확실한 웹사이트를 제작해드리며,',
+            '디자이너는 없지만 거품은 없는 가격으로 만들어드립니다.',
+          ]}
+        />
+        <BodyItem
+          imageSrc={'/main_image2.jpg'}
+          imageAlt={'make_web_main_image'}
+          titleDescription={'무료로 유지보수 해드립니다.'}
+          subtitleDescription={'끝까지 책임지겠습니다.'}
+          smallDescriptionTitle={'관리가 안될까봐 걱정하지마세요.'}
+          smallSubDescriptionContents={[
+            '유지보수를 끝까지 책임지겠습니다.',
+            '문제가 있다면 말씀만해주세요.',
+          ]}
+        />
+        <BodyItem
+          imageSrc={'/main_image2.jpg'}
+          imageAlt={'make_web_main_image'}
+          titleDescription={'무료로 유지보수 해드립니다.'}
+          subtitleDescription={'끝까지 책임지겠습니다.'}
+          smallDescriptionTitle={'관리가 안될까봐 걱정하지마세요.'}
+          smallSubDescriptionContents={[
+            '유지보수를 끝까지 책임지겠습니다.',
+            '문제가 있다면 말씀만해주세요.',
+          ]}
+        />
       </BodySection>
     </>
   );

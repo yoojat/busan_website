@@ -32,7 +32,8 @@ w-4/5
 max-w-[18.75em]
 h-screen
 ${(props) => (props.$isSideMenuShow ? 'right-0' : '-right-full')}
-transition-transform
+transition-all
+lg:transition-none
 duration-500
 ease-menu-in-out
 top-0
@@ -73,8 +74,8 @@ ${(props) => (props.$isSideMenuShow ? 'visible' : 'invisible')}
 transition-all
 duration-500
 w-full
-h-screen
-absolute
+h-full
+fixed
 -z-10
 `;
 
