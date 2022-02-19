@@ -9,15 +9,14 @@ const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`
 ${(_) => bgColor}
 absolute
 w-full
-mt-14
-md:mt-20
+mt-20
+md:mt-24
 -z-50
 `;
 
 const Footer = tw.footer`
   bg-green-900
   w-full
-  mt-40
   py-5
   text-white
   text-center
@@ -57,7 +56,7 @@ export default function Layout({ children }: IProps) {
       />
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>
-        <Footer>footer</Footer>
+        <Footer>100WEBSITES</Footer>
       </ContentLayout>
     </>
   );

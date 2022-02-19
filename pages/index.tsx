@@ -69,7 +69,46 @@ const ImageContainer = tw.div`
 const BodySection = tw.section`
   mt-20
   space-y-24
-  
+`;
+
+const MessageSection = tw.section`
+  bg-orange-50
+  mt-20
+  flex
+  justify-between
+  flex-wrap
+`;
+
+const MessageContentContainer = tw.div`
+  max-w-7xl
+  pl-10
+  lg:pl-40
+  pt-10
+  pb-10
+
+`;
+
+const MessageTitle = tw.h1`
+font-normal
+text-2xl
+mb-7
+`;
+
+const MessageSubtitle = tw.h2`
+text-slate-500
+font-normal
+`;
+
+const MessageSubtitleHead = tw.h3`
+pb-1 font-medium text-slate-900`;
+const MessaegSubtitleContent = tw.p`
+`;
+
+const MessageImgContainer = tw.div`
+w-full
+md:w-96
+h-60
+relative
 `;
 
 const Home: NextPage = () => {
@@ -101,7 +140,7 @@ const Home: NextPage = () => {
           <ImageSection>
             <ImageContainer>
               <Image
-                src={'/main_image.jpg'}
+                src={'/webmaking.jpg'}
                 alt='make_web_main_image'
                 width={400}
                 height={300}
@@ -114,8 +153,8 @@ const Home: NextPage = () => {
       </TopSection>
       <BodySection>
         <BodyItem
-          imageSrc={'/main_image2.jpg'}
-          imageAlt={'make_web_main_image'}
+          imageSrc={'/consulting.jpg'}
+          imageAlt={'web_consulting'}
           titleDescription={'웹사이트 제작에 대해서 잘 모르시나요?'}
           subtitleDescription={'꼭 저희를 통해서 진행하지 않으셔도 됩니다.'}
           smallDescriptionTitle={'무료로 상담해드립니다.'}
@@ -125,8 +164,8 @@ const Home: NextPage = () => {
           ]}
         />
         <BodyItem
-          imageSrc={'/main_image2.jpg'}
-          imageAlt={'make_web_main_image'}
+          imageSrc={'/nodesign.jpg'}
+          imageAlt={'we have no designer but'}
           titleDescription={'저희는 디자이너는 없습니다.'}
           subtitleDescription={'대신 참고하실 사이트만 알려주세요!'}
           smallDescriptionTitle={'저희는 디자이너는 없습니다. 단!'}
@@ -138,19 +177,8 @@ const Home: NextPage = () => {
           ]}
         />
         <BodyItem
-          imageSrc={'/main_image2.jpg'}
-          imageAlt={'make_web_main_image'}
-          titleDescription={'무료로 유지보수 해드립니다.'}
-          subtitleDescription={'끝까지 책임지겠습니다.'}
-          smallDescriptionTitle={'관리가 안될까봐 걱정하지마세요.'}
-          smallSubDescriptionContents={[
-            '유지보수를 끝까지 책임지겠습니다.',
-            '문제가 있다면 말씀만해주세요.',
-          ]}
-        />
-        <BodyItem
-          imageSrc={'/main_image2.jpg'}
-          imageAlt={'make_web_main_image'}
+          imageSrc={'/maintaining.jpg'}
+          imageAlt={'maintaining'}
           titleDescription={'무료로 유지보수 해드립니다.'}
           subtitleDescription={'끝까지 책임지겠습니다.'}
           smallDescriptionTitle={'관리가 안될까봐 걱정하지마세요.'}
@@ -160,6 +188,33 @@ const Home: NextPage = () => {
           ]}
         />
       </BodySection>
+      <MessageSection>
+        <MessageContentContainer>
+          <MessageTitle>생각을 현실로 만드세요.</MessageTitle>
+          <MessageSubtitle>
+            <MessageSubtitleHead>
+              좋은 생각이 있다면 실행을 시켜야합니다.
+            </MessageSubtitleHead>
+            <MessaegSubtitleContent>
+              좋은 생각은 누구나 할 수 있습니다.
+              <br />
+              하지만 행동은 아무나 할 수 없습니다.
+              <br />
+              지금 바로 시작해보세요.
+            </MessaegSubtitleContent>
+          </MessageSubtitle>
+        </MessageContentContainer>
+        <MessageImgContainer>
+          <Image
+            src='/moving.jpg'
+            alt='move yourself'
+            layout='fill'
+            objectFit='cover'
+            // width={800}
+            // height={600}
+          />
+        </MessageImgContainer>
+      </MessageSection>
     </>
   );
 };

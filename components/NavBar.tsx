@@ -7,8 +7,8 @@ const TopBarWrapper = tw.div`
 justify-between
 items-center
 flex
-h-14
-md:h-20
+h-20
+md:h-24
 px-7
 lg:px-24
 fixed
@@ -24,6 +24,10 @@ lg:hidden
 `;
 
 const ImageContainer = tw.div`
+w-36
+h-16
+relative
+mt-5
 `;
 
 const MenuContainer = tw.div<{ $isSideMenuShow: boolean }>`
@@ -111,8 +115,9 @@ export default function NavBar({
               <Image
                 src={logo}
                 alt={title}
-                width={200}
-                height={50}
+                // width={170}
+                // height={100}
+                layout='fill'
                 objectFit='contain'
               />
             </ImageContainer>
@@ -125,8 +130,8 @@ export default function NavBar({
                 <Image
                   src={logo}
                   alt={title}
-                  width={200}
-                  height={50}
+                  width={150}
+                  height={100}
                   objectFit='contain'
                 />
               </a>
