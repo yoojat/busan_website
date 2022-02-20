@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import tw from 'tailwind-styled-components';
-import { bgColor, menus } from '../libs/options';
-import { mediaSize } from '../libs/media';
+import { bgColor, menus } from '@libs/options';
+import { mediaSize } from '@libs/media';
 import { Router } from 'next/router';
 
 const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import tw from 'tailwind-styled-components';
-import { logo, title } from '../libs/options';
+import { logo, title } from '@libs/options';
 
 const TopBarWrapper = tw.div`
 justify-between

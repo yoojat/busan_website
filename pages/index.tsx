@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import tw from 'tailwind-styled-components';
-import BodyItem from '../components/bodyItem';
+import BodyItem from '@components/BodyItem';
 
 const TopSection = tw.div`
   pt-14
@@ -20,12 +20,12 @@ const TopContentContainer = tw.div`
 `;
 
 const HeadSection = tw.section`
-w-full
-lg:w-auto
+  w-full
+  lg:w-auto
 `;
 const ImageSection = tw.section`
-hidden
-lg:block
+  hidden
+  lg:block
 `;
 
 const TitleContainer = tw.div``;
@@ -48,18 +48,18 @@ const SubText = tw.div`
 `;
 const ButotnContainer = tw.div``;
 const ContactBtn = tw.button`
-bg-emerald-600
-w-full
-rounded-md
-py-3
-mb-10
-text-white
-font-bold
-cursor-pointer
+  bg-emerald-600
+  w-full
+  rounded-md
+  py-3
+  mb-10
+  text-white
+  font-bold
+  cursor-pointer
 hover:bg-emerald-700
-transition-all
-duration-300
-active:bg-emerald-900
+  transition-all
+  duration-300
+  active:bg-emerald-900
 `;
 
 const ImageContainer = tw.div`
@@ -89,26 +89,26 @@ const MessageContentContainer = tw.div`
 `;
 
 const MessageTitle = tw.h1`
-font-normal
-text-2xl
-mb-7
+  font-normal
+  text-2xl
+  mb-7
 `;
 
 const MessageSubtitle = tw.h2`
-text-slate-500
-font-normal
+  text-slate-500
+  font-normal
 `;
 
 const MessageSubtitleHead = tw.h3`
-pb-1 font-medium text-slate-900`;
+  pb-1 font-medium text-slate-900`;
 const MessaegSubtitleContent = tw.p`
 `;
 
 const MessageImgContainer = tw.div`
-w-full
-md:w-96
-h-60
-relative
+  w-full
+  md:w-96
+  h-60
+  relative
 `;
 
 const Home: NextPage = () => {
