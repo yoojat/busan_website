@@ -36,6 +36,9 @@ const PortfolioSection = tw.section`
   px-10
   bg-[#054a49]
   shadow-2xl
+  flex
+  flex-col
+  items-center
   justify-center
   space-y-32
 `;
@@ -66,7 +69,7 @@ const Portfolio: NextPage = () => {
           title='무인공간통합센터 홈페이지'
           descriptions={[
             '무인 스터디카페의 솔루션을 제공해주는 무인공간통합센터의 홈페이지입니다.',
-            '3개월 간 아이디어 회의 끝에 런칭한 끝에 행동하여 성공적으로 확장해나가고 있습니다.',
+            '스터디카페 무인 경영의 거품을 걷어내고, 진정한 혁신을 보여주고 있습니다.',
           ]}
         />
       </PortfolioSection>

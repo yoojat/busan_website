@@ -11,8 +11,6 @@ const PortfolioItemContainer = tw.div`
   items-center
   lg:flex-row
   lg:even:flex-row-reverse
-  lg:space-x-10
-  lg:even:-space-x-0
   lg:items-center
 
 `;
@@ -26,6 +24,7 @@ const TwPortfolioImgContainer = tw(PortfolioImgContainer)`
   text-center
   mb-10
   lg:max-w-md
+  px-8
 `;
 
 const PortfolioDescription = tw.div`
