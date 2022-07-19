@@ -24,7 +24,7 @@ lg:hidden
 `;
 
 const ImageContainer = tw.div`
-w-36
+w-16
 h-16
 relative
 mt-5
@@ -130,7 +130,7 @@ export default function NavBar({
                 <Image
                   src={logo}
                   alt={title}
-                  width={150}
+                  width={100}
                   height={100}
                   objectFit='contain'
                 />

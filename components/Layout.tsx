@@ -56,7 +56,7 @@ export default function Layout({ children }: IProps) {
       />
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>
-        <Footer>100WEBSITES</Footer>
+        <Footer>부산 웹메이커</Footer>
       </ContentLayout>
     </>
   );

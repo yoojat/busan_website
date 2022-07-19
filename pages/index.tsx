@@ -119,7 +119,7 @@ const Home: NextPage = () => {
           <HeadSection>
             <TitleContainer>
               <TopSmallTitle>
-                <h3>웹사이트 전문 제작</h3>
+                <h3>부산 웹사이트 전문 제작</h3>
               </TopSmallTitle>
               <BigTitle>
                 <h1>마음에 들지 않으면 100% 환불해드립니다.</h1>

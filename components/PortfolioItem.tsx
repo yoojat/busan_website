@@ -24,7 +24,7 @@ const TwPortfolioImgContainer = tw(PortfolioImgContainer)`
   text-center
   mb-10
   lg:max-w-md
-  px-8
+  lg:px-8
 `;
 
 const PortfolioDescription = tw.div`
@@ -32,7 +32,7 @@ w-full
 `;
 
 interface IProps {
-  imgSrc: string;
+  imgSrc: StaticImageData;
   imgAlt: string;
   href: string;
   title: string;
@@ -53,8 +53,9 @@ export default function PortfolioItem({
           src={imgSrc}
           alt={imgAlt}
           objectFit='cover'
-          width={1200}
+          width={1300}
           height={800}
+          placeholder='blur'
         />
       </TwPortfolioImgContainer>
       <PortfolioDescription>
